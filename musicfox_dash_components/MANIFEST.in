@@ -7,3 +7,4 @@ include assets/intro.js
 include assets/introjs.css
 include src/lib/helpers/defaultProps.js
 include src/lib/helpers/proptypes.js
+include ../readme.md
