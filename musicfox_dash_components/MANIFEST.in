@@ -1,0 +1,5 @@
+include musicfox_dash_components/musicfox_dash_components.min.js
+include musicfox_dash_components/musicfox_dash_components.dev.js
+include musicfox_dash_components/metadata.json
+include musicfox_dash_components/package.json
+include README.md
