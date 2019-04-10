@@ -10,7 +10,6 @@ Dash components from your favorite music technology company musicfox.io
 This component narrowly implements a typical web-walkthrough *intro* using a small subset of the `intro.js` component library.
 
 ```python
->>> mdc.Hello() # Will use default data-* attributes when rendered by the React DOM
 >>> steps = [
 >>>     dict(intro='my intro language', element='#selector-by-id1'),
 >>>     dict(intro='my other intro language', element='.selector-by-class1'),
