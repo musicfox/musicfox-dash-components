@@ -12,7 +12,8 @@ This component narrowly implements a typical web-walkthrough *intro* using a sma
 ```python
 >>> mdc.Hello() # Will use default data-* attributes when rendered by the React DOM
 >>> steps = [
->>>     dict(intro='my intro language', element='selector-by-id1'),
->>>     dict(intro='my other intro language', element='selector-by-id2'),
+>>>     dict(intro='my intro language', element='#selector-by-id1'),
+>>>     dict(intro='my other intro language', element='.selector-by-class1'),
+>>>     dict(intro="my other other intro language',element='.position-test', position='right'), #whoa...
 >>> ]
 >>> mdc.Hello(steps=steps) # no HTML-5 attributes necessary as Hello will fire on page load for the given steps
