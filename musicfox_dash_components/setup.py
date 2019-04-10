@@ -1,21 +1,21 @@
 import json
 import os
 from setuptools import setup
-import io
 
 with open(os.path.join('musicfox_dash_components', 'package.json')) as f:
     package = json.load(f)
 
 package_name = package["name"].replace(" ", "_").replace("-", "_")
 
-with io.open(os.path.join('../', 'readme.md'), encoding='utf-8') as f:
+with open(os.path.join(os.getcwd(), 'readme.md'), encoding="utf-8") as f:
     long_description = '\n' + f.read()
 
 repo_url = f"https://github.com/thinkjrs/musicfox-dash-components"
 setup(
     name=package_name,
     version=package["version"],
-    author=package['author'],
+    author="Jason R. Stevens, CFA | musicfox.io",
+    author_email="dev@musicfox.io",
     packages=[package_name],
     include_package_data=True,
     license=package['license'],

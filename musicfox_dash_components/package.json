@@ -1,7 +1,7 @@
 {
   "name": "musicfox_dash_components",
-  "version": "0.0.4",
-  "description": "Your clients need a proper introduction to your work. Introducing hello, a Dash component from musicfox.io that lets you meticulously execute your walkthrough, each graph, story, or plot at a time.",
+  "version": "0.0.6",
+  "description": "Dash components from your favorite music tech company, musifox.io.",
   "main": "build/index.js",
   "scripts": {
     "start": "webpack-serve ./webpack.serve.config.js --open",
