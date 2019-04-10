@@ -5,7 +5,7 @@ Dash components from your favorite music technology company musicfox.io
 
 Get the goods:
 ```bash
-pip install --user musicfox_dash_components
+pip install --user musicfox-dash-components
 ```
 
 Then import the musicfox.io component library:
