@@ -1,6 +1,6 @@
 {
   "name": "musicfox_dash_components",
-  "version": "0.0.2a",
+  "version": "0.0.2b",
   "description": "Your clients need a proper introduction to your work. Introducing hello, a Dash component from musicfox.io that lets you meticulously execute your walkthrough, each graph, story, or plot at a time.",
   "main": "build/index.js",
   "scripts": {
