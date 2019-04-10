@@ -2,11 +2,18 @@
 Dash components from your favorite music technology company musicfox.io
 
 ## Quickstart
+
+Get the goods:
+```bash
+pip install --user musicfox-dash-components
+```
+
+Then import the musicfox.io component library:
 ```python
 >>> import musicfox_dash_components as mdc
 ```
 ## `Hello` component: `mdc.Hello`
-
+###### Your first walkthrough
 This component narrowly implements a typical web-walkthrough *intro* using a small subset of the `intro.js` component library.
 
 ```python
