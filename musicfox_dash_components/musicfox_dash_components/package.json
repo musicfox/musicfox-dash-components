@@ -17,6 +17,8 @@
   "author": "Jason R. Stevens, CFA jstevens@reconditecapital.com",
   "license": "MIT",
   "dependencies": {
+    "intro.js": "^2.5.0",
+    "intro.js-react": "^0.2.0",
     "ramda": "^0.25.0"
   },
   "devDependencies": {

@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import '../../../assets/intro.js'
+import '../../../assets/introjs.css'
+import { Steps, Hints } from 'intro.js-react'
 
 /**
  * ExampleComponent is an example component.
@@ -8,34 +11,38 @@ import PropTypes from 'prop-types';
  * It renders an input with the property `value`
  * which is editable by the user.
  */
-export default class Hello extends Component {
-    render() {
-        const {id, label, setProps, value} = this.props;
 
+var onExit = () => {
+    this.setState(() => ({ stepsEnabled: false}));
+};
+
+export default class Hello extends Component {
+    constructor(props) {
+        super(props);
+	    this.state = {
+        	stepsEnabled: true,
+        	initialStep: 0,
+    	};
+	}
+    render() {
+        const {id, label, setProps, value, steps} = this.props;
+        const { stepsEnabled, initialStep,} = this.state;
         return (
             <div id={id}>
-                ExampleComponent: {label}&nbsp;
-                <input
-                    value={value}
-                    onChange={
-                        /*
-                         * Send the new value to the parent component.
-                         * setProps is a prop that is automatically supplied
-                         * by dash's front-end ("dash-renderer").
-                         * In a Dash app, this will update the component's
-                         * props and send the data back to the Python Dash
-                         * app server if a callback uses the modified prop as
-                         * Input or State.
-                         */
-                        e => setProps({ value: e.target.value })
-                    }
-                />
+              <Steps               
+                enabled={stepsEnabled}
+                steps={steps}
+                initialStep={0}
+                onExit={this.onExit}
+              />
             </div>
         );
     }
 }
 
-Hello.defaultProps = {};
+Hello.defaultProps = {
+	stepsEnabled: true,
+};
 
 Hello.propTypes = {
     /**
@@ -57,5 +64,10 @@ Hello.propTypes = {
      * Dash-assigned callback that should be called whenever any of the
      * properties change
      */
-    setProps: PropTypes.func
+    setProps: PropTypes.func,
+    /**
+     * List of dictionaries containing each step, with "intro" and "element"
+     * keys, at a minimum.
+     */
+    steps: PropTypes.array,
 };
