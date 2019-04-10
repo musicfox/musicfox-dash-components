@@ -25,5 +25,5 @@ This component narrowly implements a typical web-walkthrough *intro* using a sma
 >>> mdc.Hello(steps=steps) # no HTML-5 attributes necessary as Hello will fire on page load for the given steps
 ```
 
-![musicfox.io Hello component GIF demo](https://github.com/thinkjrs/musicfox-dash-components/blob/c38b42951557341751595f55d3b28523e10a4c4b/demo_assets/Hello_04092019.gif)
+![musicfox.io Hello component GIF demo](https://github.com/thinkjrs/musicfox-dash-components/blob/ee7dbf50994c07f7e0127f1372882174927ad2ea/demo_assets/Hello_04102019.gif)
 
