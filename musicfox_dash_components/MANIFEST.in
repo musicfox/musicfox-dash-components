@@ -3,3 +3,7 @@ include musicfox_dash_components/musicfox_dash_components.dev.js
 include musicfox_dash_components/metadata.json
 include musicfox_dash_components/package.json
 include README.md
+include assets/intro.js
+include assets/introjs.css
+include src/lib/helpers/defaultProps.js
+include src/lib/helpers/proptypes.js

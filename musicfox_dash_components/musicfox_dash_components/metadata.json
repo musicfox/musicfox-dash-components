@@ -15,15 +15,12 @@
         "type": {
           "name": "string"
         },
-        "required": true,
-        "description": "A label that will be printed when this component is rendered."
-      },
-      "value": {
-        "type": {
-          "name": "string"
-        },
         "required": false,
-        "description": "The value displayed in the input"
+        "description": "A label that will be printed when this component is rendered.",
+        "defaultValue": {
+          "value": "\"Hello dash component from musicfox.io\"",
+          "computed": false
+        }
       },
       "setProps": {
         "type": {
@@ -38,13 +35,6 @@
         },
         "required": false,
         "description": "List of dictionaries containing each step, with \"intro\" and \"element\"\nkeys, at a minimum."
-      },
-      "stepsEnabled": {
-        "defaultValue": {
-          "value": "true",
-          "computed": false
-        },
-        "required": false
       }
     }
   }

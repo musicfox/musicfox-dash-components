@@ -12,7 +12,7 @@ import { Steps, Hints } from 'intro.js-react'
  * which is editable by the user.
  */
 
-var onExit = () => {
+let onexit = () => {
     this.setState(() => ({ stepsEnabled: false}));
 };
 
@@ -33,7 +33,7 @@ export default class Hello extends Component {
                 enabled={stepsEnabled}
                 steps={steps}
                 initialStep={0}
-                onExit={this.onExit}
+                onExit={this.onexit}
               />
             </div>
         );
@@ -41,7 +41,7 @@ export default class Hello extends Component {
 }
 
 Hello.defaultProps = {
-	stepsEnabled: true,
+    label: "Hello dash component from musicfox.io",
 };
 
 Hello.propTypes = {
@@ -54,11 +54,6 @@ Hello.propTypes = {
      * A label that will be printed when this component is rendered.
      */
     label: PropTypes.string.isRequired,
-
-    /**
-     * The value displayed in the input
-     */
-    value: PropTypes.string,
 
     /**
      * Dash-assigned callback that should be called whenever any of the
