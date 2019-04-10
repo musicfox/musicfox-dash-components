@@ -12,45 +12,63 @@ app.css.append_css({
     }
 )
 steps = [
-    dict(element='.hello', intro="Did you know that testing is important?",
+    dict(element='.hello', intro="Did you know that testing resultant outcomes is important?",
         position="bottom",),
     dict(element='.world', intro="The software world is decent with this, fortunately."),
+    dict(element='#subheader', intro="But because the growth of things using software is growing faster than those who write software can manage, our world remains perilous.",
+        position="bottom-right"),
     dict(element=".right-tooltip", intro="If this worked, it's on the right.",
         position="right"),
     dict(element=".left-tooltip", intro="If this worked, it's on the left.",
         position="left"),
-    dict(element=".bottom-tooltip", intro="If this worked, it's on the bottom.",
+    dict(element="#bottom-button", intro="If this worked, it's on the bottom.",
         position="bottom"),
     dict(element=".top-tooltip", intro="If this worked, it's on the top.",
         position="top"),
 ]
-app.layout = html.Div(className='container my-auto', children=[
+app.layout = html.Div(className='container-fluid bg-light my-auto', children=[
 
     mdc.Hello(
         id='input',
-        label='my-label',
         steps=steps,
     ),
-    html.H1("Introducing the musicfox.io Hello component."),
-    html.H2("This is a test.", id='output', className='align-center hello text-secondary',),
-    html.H6("And we're testing the introductory tooltip that will make up the functionality of the Hello component.",
-        id="subheader",
-        className="world",
+    html.Div(className="jumbotron bglight",
+        children=[
+            html.H1("Introducing the musicfox.io Hello component for Dash.",
+                className="display-4 hello"
+            ),
+            html.P("This is a test.",
+                id='output',
+                className='lead world text-secondary',
+            ),
+            html.P("And we're testing the introductory tooltip that will make up the functionality of the Hello component.",
+                id="subheader",
+                className="text-left",
+            ),
+
+        ],
     ),
     html.Div(className="row", 
         children=[
-            html.P(children="Tooltip right", className="col right-tooltip"),
-            html.P(children="Tooltip left", className="col left-tooltip"),
+            html.P(children="Tooltip right", className="col text-center mx-4 right-tooltip"),
+            html.P(children="Tooltip left", className="col text-center mx-4 left-tooltip"),
         ],
     ),
+    html.Hr(className="my-4"),
     html.Div(className="row",
         children=[
-            html.Div(className="col", 
-                children=[
-                    html.Label("Tooltip bottom"),
-                    html.Select(title="Tooltip bottom", className="text-warning bottom-tooltip"),
-                    html.P("Tooltip top", className="text-success top-tooltip"),
-                ]
+            html.Div(className="col text-center", 
+                children=html.A("Tooltip Bottom",
+                    className="btn btn-secondary bottom-tooltip",
+                    href='https://github.com/thinkjrs/musicfox-dash-components', 
+                    role='button',
+                    id='bottom-button',
+                ),
+            ),
+            html.Div(className="col text-center", 
+                children=html.P("Tooltip top",
+                        className="btn btn-secondary top-tooltip"
+                ),
             ),
         ],
     ),

@@ -1,6 +1,6 @@
 {
   "name": "musicfox_dash_components",
-  "version": "0.0.2b",
+  "version": "0.0.4",
   "description": "Your clients need a proper introduction to your work. Introducing hello, a Dash component from musicfox.io that lets you meticulously execute your walkthrough, each graph, story, or plot at a time.",
   "main": "build/index.js",
   "scripts": {
@@ -17,15 +17,20 @@
   "author": "Jason R. Stevens, CFA jstevens@reconditecapital.com",
   "license": "MIT",
   "dependencies": {
+    "@babel/core": "^7.4.3",
+    "babel-core": "^6",
     "intro.js": "^2.5.0",
     "intro.js-react": "^0.2.0",
-    "ramda": "^0.25.0"
+    "ramda": "^0.25.0",
+    "regenerator-runtime": "^0.13.2",
+    "acorn": "^6.0.0"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.4.0",
-    "babel-core": "^6.26.3",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^8.2.3",
     "babel-loader": "^7.1.4",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "copyfiles": "^2.0.0",

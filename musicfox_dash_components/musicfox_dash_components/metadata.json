@@ -11,17 +11,6 @@
         "required": false,
         "description": "The ID used to identify this component in Dash callbacks"
       },
-      "label": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "A label that will be printed when this component is rendered.",
-        "defaultValue": {
-          "value": "\"Hello dash component from musicfox.io\"",
-          "computed": false
-        }
-      },
       "setProps": {
         "type": {
           "name": "func"
@@ -33,8 +22,165 @@
         "type": {
           "name": "array"
         },
-        "required": false,
+        "required": true,
         "description": "List of dictionaries containing each step, with \"intro\" and \"element\"\nkeys, at a minimum."
+      },
+      "nextLabel": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "nextLabel\n\nString label for the \"next\" button",
+        "defaultValue": {
+          "value": "\"Next\"",
+          "computed": false
+        }
+      },
+      "prevLabel": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "prevLabel\n\nString label for the \"prev\" button",
+        "defaultValue": {
+          "value": "\"Previous\"",
+          "computed": false
+        }
+      },
+      "skipLabel": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "skipLabel \n\nString label for the \"skip\" button",
+        "defaultValue": {
+          "value": "\"Skip tutorial\"",
+          "computed": false
+        }
+      },
+      "doneLabel": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "doneLabel\n\nString label for the \"done\" button",
+        "defaultValue": {
+          "value": "\"Done\"",
+          "computed": false
+        }
+      },
+      "hidePrev": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "hidePrev\n\nBoolean true to hide \"prev\" button in the first step, default is false, \ndisabled (grayed-out).",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
+      },
+      "hideNext": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "hideNext\n\nBoolean true to hide \"next\" button in the last step, default is false,\ndisabled (grayed-out).",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
+      },
+      "defaultTooltipPos": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "defaultTooltipPos\n\nString default tooltip position (these can be changed per-step)",
+        "defaultValue": {
+          "value": "'bottom'",
+          "computed": false
+        }
+      },
+      "tooltipClass": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "tooltipClass\n\nString class of all tooltip CSS"
+      },
+      "highlightClass": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "highlightClass\n\nString class of all highlight over tooltip CSS (for the helperLayer) in\nintro.js"
+      },
+      "exitOnEsc": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "exitOnEsc\n\nBoolean true exits with an esc keypress, defaults to true",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
+      },
+      "exitOnOverlayClick": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "exitOnOverlayClick\n\nBoolean true exits if clicking on the overlay, defaults to false",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
+      },
+      "showStepNumbers": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "showStepNumbers\n\nBoolean true shows the steps in the red circle, default true",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
+      },
+      "keyboardNavigation": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "keyboardNavigation\n\nBoolean true allows navigating with the keyboard",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
+      },
+      "showProgress": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "showProgress\n\n\nBoolean true shows the progress bar",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
+      },
+      "overlayOpacity": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "overlayOpacity\n\nNumber between 0 and 1 adjusts the opacity of the overlay layer",
+        "defaultValue": {
+          "value": ".5",
+          "computed": false
+        }
       }
     }
   }
