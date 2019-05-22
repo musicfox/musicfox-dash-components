@@ -52,5 +52,6 @@ You get the point. :wink:
 >>>     title="Groceries",
 >>>     subtitle="Our weekly list of items to obtain from a grocer.",
 >>>     todolist=[dict(Fruits=["Apples", "Pears", "Blueberries"], Dry=["Cereal", "Kidney Beans"], Protein=["Tofu", "Ribeye Steak"])],
->>>     footer=[
->>> ] 
+>>>     footer=["Updated: just now"]
+>>> ))
+```
