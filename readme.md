@@ -24,7 +24,7 @@ This component narrowly implements a typical web-walkthrough *intro* using a sma
 >>> steps = [
 >>>     dict(intro='my intro language', element='#selector-by-id1'),
 >>>     dict(intro='my other intro language', element='.selector-by-class1'),
->>>     dict(intro="my other other intro language',element='.position-test', position='right'), #whoa...
+>>>     dict(intro='my other other intro language', element='.position-test', position='right'), #whoa...
 >>> ]
 >>> mdc.Hello(steps=steps) # no HTML-5 attributes necessary as Hello will fire on page load for the given steps
 ```
@@ -47,13 +47,19 @@ You get the point. :wink:
 
 
 ```python
->>> todolist = 
 >>> mdc.ToDo(dict(
 >>>     title="Groceries",
 >>>     subtitle="Our weekly list of items to obtain from a grocer.",
->>>     todos=[dict(Fruits=["Apples", "Pears", "Blueberries"], Dry=["Cereal", "Kidney Beans"], Protein=["Tofu", "Ribeye Steak"])],
+>>>     todos=[ # this can be a mix of strings or dictionaries
+>>>         dict(
+>>>             Fruits=["Apples", "Pears", "Blueberries"], 
+>>>             Dry=["Cereal", "Kidney Beans"], 
+>>>             Protein=["Tofu", "Ribeye Steak"],
+>>>         ),
+>>>         'Nutella',
+>>>     ],
 >>>     footer=["Updated: just now"]
->>> ))
+>>> )) # isn't she lovely?
 ```
 **Required Params**
 - `id`: a string id for the composed element
