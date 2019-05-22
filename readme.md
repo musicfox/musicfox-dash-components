@@ -51,7 +51,16 @@ You get the point. :wink:
 >>> mdc.ToDo(dict(
 >>>     title="Groceries",
 >>>     subtitle="Our weekly list of items to obtain from a grocer.",
->>>     todolist=[dict(Fruits=["Apples", "Pears", "Blueberries"], Dry=["Cereal", "Kidney Beans"], Protein=["Tofu", "Ribeye Steak"])],
+>>>     todos=[dict(Fruits=["Apples", "Pears", "Blueberries"], Dry=["Cereal", "Kidney Beans"], Protein=["Tofu", "Ribeye Steak"])],
 >>>     footer=["Updated: just now"]
 >>> ))
 ```
+**Required Params**
+- `id`: a string id for the composed element
+- `todos`: a list of strings or dictionary key:value string:list, a *ToDo List*
+    - a todo can always be nested as dictionary string key and value list (and possibly more dictionaries)
+
+**Optional Params**
+- `title`: a string *Title* for the todo list
+- `subtitle`: a string *Subtitle* for the todo list
+- `footer`: a string *Footer* for the todo list
