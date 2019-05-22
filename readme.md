@@ -27,7 +27,7 @@ This component narrowly implements a typical web-walkthrough *intro* using a sma
 >>> mdc.Hello(steps=steps) # no HTML-5 attributes necessary as Hello will fire on page load for the given steps
 ```
 
-## 'ToDo` component: `mdc.ToDo`
+## `ToDo` component: `mdc.ToDo`
 
 ###### Usage
 This component narrowly implements a ToDo card with four simple sections: A *Title*, a *Subtitle*, a *ToDo List* and a *Footer*. 
@@ -40,7 +40,7 @@ Furthermore, the *ToDo List* can have a list of dictionaries to indicate list he
 >    - Cereal
 >    - ...
 
-You get the point ;-).
+You get the point :wink:!
 
 
 ```python
