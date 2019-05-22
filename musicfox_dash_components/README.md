@@ -4,7 +4,7 @@ musicfox.io Dash Components is a Dash component library.
 
 Get started with:
 1. Install Dash and its dependencies: https://dash.plot.ly/installation
-2. Run `python usage.py`
+2. Run `python <ComponentName>_usage.py`
 3. Visit http://localhost:8050 in your web browser
 
 ### Install dependencies
@@ -15,6 +15,25 @@ If you have selected install_dependencies during the prompt, you can skip this p
     ```
     $ npm install
     ```
+**Anaconda alternate installation:**
+
+If you're a data scientist, data dev, or musicfox.io core dev, go this route.
+
+2. Create a new conda environment and activate.
+    ```
+    $ conda env create -f requirements --name mdc-dev
+    $ conda activate mdc-dev
+    ```
+
+4. Install the python packages for testing (optional)
+    ```
+    (mdc-dev) $ conda install -f tests/requirements.txt
+    ```
+
+**Standard `pip`-`virtualenv` installation**
+
+If you're not a musicfox.io core dev and want to mess around, go this route.
+
 2. Create a virtual env and activate.
     ```
     $ virtualenv venv
@@ -39,9 +58,9 @@ If you have selected install_dependencies during the prompt, you can skip this p
         ```
         $ npm run build:all
         ```
-    2. Run and modify the `usage.py` sample dash app:
+    2. Run and modify the `<ComponentName>_usage.py` sample dash app:
         ```
-        $ python usage.py
+        $ python <ComponentName>_usage.py
         ```
 - Write tests for your component.
     - A sample test is available in `tests/test_usage.py`, it will load `usage.py` and you can then automate interactions with selenium.
