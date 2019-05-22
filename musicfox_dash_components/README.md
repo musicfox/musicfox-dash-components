@@ -7,10 +7,6 @@ Get started with:
 2. Run `python usage.py`
 3. Visit http://localhost:8050 in your web browser
 
-## Contributing
-
-See [CONTRIBUTING.md](./CONTRIBUTING.md)
-
 ### Install dependencies
 
 If you have selected install_dependencies during the prompt, you can skip this part.
