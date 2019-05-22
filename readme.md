@@ -47,7 +47,6 @@ You get the point. :wink:
 
 
 ```python
->>> todolist = 
 >>> mdc.ToDo(dict(
 >>>     title="Groceries",
 >>>     subtitle="Our weekly list of items to obtain from a grocer.",
