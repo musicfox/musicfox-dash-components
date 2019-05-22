@@ -51,9 +51,16 @@ You get the point. :wink:
 >>> mdc.ToDo(dict(
 >>>     title="Groceries",
 >>>     subtitle="Our weekly list of items to obtain from a grocer.",
->>>     todos=[dict(Fruits=["Apples", "Pears", "Blueberries"], Dry=["Cereal", "Kidney Beans"], Protein=["Tofu", "Ribeye Steak"])],
+>>>     todos=[ # this can be a mix of strings or dictionaries
+>>>         dict(
+>>>             Fruits=["Apples", "Pears", "Blueberries"], 
+>>>             Dry=["Cereal", "Kidney Beans"], 
+>>>             Protein=["Tofu", "Ribeye Steak"],
+>>>         ),
+>>>         'Nutella',
+>>>     ],
 >>>     footer=["Updated: just now"]
->>> ))
+>>> )) # isn't she lovely?
 ```
 **Required Params**
 - `id`: a string id for the composed element
