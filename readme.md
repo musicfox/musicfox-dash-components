@@ -13,10 +13,12 @@ Then import the musicfox.io component library:
 >>> import musicfox_dash_components as mdc
 ```
 ## `Hello` component: `mdc.Hello`
-![musicfox.io Hello component GIF demo](https://github.com/thinkjrs/musicfox-dash-components/blob/ee7dbf50994c07f7e0127f1372882174927ad2ea/demo_assets/Hello_04102019.gif)
+![musicfox.io Hello component GIF demo](https://github.com/thinkjrs/musicfox-dash-components/blob/ee7dbf50994c07f7e0127f1372882174927ad2ea/demo_assets/Hello_04102019.gif)  
+
+This component narrowly implements a typical web-walkthrough *intro* using a small subset of the `intro.js` component library.
 
 ###### Usage 
-This component narrowly implements a typical web-walkthrough *intro* using a small subset of the `intro.js` component library.
+
 
 ```python
 >>> steps = [
@@ -29,9 +31,8 @@ This component narrowly implements a typical web-walkthrough *intro* using a sma
 
 ## `ToDo` component: `mdc.ToDo`
 
-###### Usage
-This component narrowly implements a ToDo card with four simple sections: A *Title*, a *Subtitle*, a *ToDo List* and a *Footer*. 
-Furthermore, the *ToDo List* can have a list of dictionaries to indicate list heirarchy, e.g. 
+This component narrowly implements a ToDo card with four simple sections: A *Title*, a *Subtitle*, a *ToDo List* and a *Footer*.  
+Furthermore, the *ToDo List* can have a list of dictionaries to indicate list heirarchy. For example, 
 >- Fruits
 >    - Apples
 >    - Pears
@@ -40,7 +41,9 @@ Furthermore, the *ToDo List* can have a list of dictionaries to indicate list he
 >    - Cereal
 >    - ...
 
-You get the point :wink:!
+You get the point. :wink:
+
+###### Usage
 
 
 ```python
