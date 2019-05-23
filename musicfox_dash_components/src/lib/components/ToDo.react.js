@@ -63,17 +63,24 @@ export default class ToDo extends Component {
             </ul>
         )
     }
+    toMD(text) {
+        return (
+            <Markdown
+                source={text}
+                escapeHtml={!this.props.dangerously_allow_html}
+            />
+        )
+    }
     listItems() {
         return ( 
             <ul 
                 style={{
-//                    display:'list-item',
                     listStyleType: 'disc',
                     paddingLeft: 0,
                     marginLeft: '1.25rem'
                 }}
                 children={this.props.todos.map(todo => (
-                    <li>{todo}</li>
+                    <li todo={todo} key={todo.key}>{this.toMD(todo)}</li>
                 ))}
             >
             </ul>
@@ -86,26 +93,100 @@ export default class ToDo extends Component {
          */
         this.children = this.listItems()
     }
-    
+    checkStringProp(prop) {
+        /**
+         * If the string prop is defined render its markdown. Otherwise render nothing.
+         *
+         */
+        if (typeof prop === 'string') {
+            return (
+                this.toMD(prop)
+            )
+        }
+    }
+    isString(string) {
+        return (typeof string === 'string')
+    }
+    /**
+     * Bootstrap-specific card class manipulations
+     *
+     */
+    makeClass(string, children) {
+        /**
+         * Return an arbitrary bootstrap class given the string.
+         *
+         */
+        return <div class={string} children={children}></div>
+    }
+    makeNothing() {
+        return <div style={{display:'none'}}></div>
+    }
+
+    cardHeader() {
+        if (this.isString(this.props.header)) {
+            return <strong>
+                <h4>
+                    {this.makeClass("card-header mb-0 text-secondary", this.toMD(this.props.header))}
+                </h4>
+            </strong>
+        } else {
+            return <div style={{display:'none'}}></div>
+        }
+    }
+    cardFooter() {
+        if (this.isString(this.props.title)) {
+            return (
+                <div class="card-footer bg-light text-muted border-light">
+                    <small>
+                        {this.toMD(this.props.footer)}
+                    </small>
+                </div>
+            )
+        } else {
+            return <div style={{display:'none'}}></div>
+        }
+    }
+    cardTitle() {
+        if (this.isString(this.props.title)) {
+            return <h5>
+                {this.makeClass("card-title", this.toMD(this.props.title))}
+            </h5>
+        } else {
+            return <div style={{display:'none'}}></div>
+        }
+    }
+    cardSubtitle() {
+        if (this.isString(this.props.subtitle)) {
+            return <h6>
+                {this.makeClass("card-subtitle text-muted mb-2 mt-2", this.toMD(this.props.subtitle))}
+            </h6>
+        } else {
+            return <div style={{display:'none'}}></div>
+        }
+    }
+    cardText() {
+        /**
+         * Static PropType checking below should keep us from error, here.
+         *
+         */
+        return this.makeClass("card-text", this.listItems())
+    }
+
+    /**
+     * Main react render DOM
+     *
+     */
     render() {
         this.makeBullets(this.props.todos)
         return (
-            <div id={this.props.id} class="card" >
+            <div id={this.props.id} class="card border-light" >
+                {this.cardHeader()}
                 <div class="card-body">
-                    <h5 class="card-title">
-                        <Markdown
-                            source={this.props.title}
-                            escapeHtml={!this.props.dangerously_allow_html}
-                        />
-                    </h5>
-                    <h6 class="card-subtitle mb-2 text-muted">
-                        <Markdown
-                            source={this.props.subtitle}
-                            escapeHtml={!this.props.dangerously_allow_html}
-                        />
-                    </h6>
-                    <p class="card-text" children={this.children}></p>
+                    {this.cardTitle()}
+                    {this.cardSubtitle()}
+                    {this.cardText()}
                 </div>
+                {this.cardFooter()}
             </div>
         );
     }
@@ -155,6 +236,12 @@ ToDo.propTypes = {
      * The string footer you'd like to include. Markdown all the way.
      */
     footer: PropTypes.string,
+
+    /**
+     * The string header you'd like to include. Markdown all the way.
+     */
+    header: PropTypes.string,
+
 
     /**
      * Boolean True or False (default)
