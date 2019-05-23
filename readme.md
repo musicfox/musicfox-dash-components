@@ -13,7 +13,7 @@ Then import the musicfox.io component library:
 >>> import musicfox_dash_components as mdc
 ```
 ## `Hello` component: `mdc.Hello`
-![musicfox.io Hello component GIF demo](https://github.com/thinkjrs/musicfox-dash-components/blob/ee7dbf50994c07f7e0127f1372882174927ad2ea/demo_assets/Hello_04102019.gif)  
+![musicfox.io Hello component GIF demo](demo_assets/Hello_04102019.gif)  
 
 This component narrowly implements a typical web-walkthrough *intro* using a small subset of the `intro.js` component library.
 
@@ -30,7 +30,7 @@ This component narrowly implements a typical web-walkthrough *intro* using a sma
 ```
 
 ## `ToDo` component: `mdc.ToDo`
-![musicfox.io ToDo component static PNG demo](https://github.com/thinkjrs/musicfox-dash-components/blob/6483207bc327d0215f76df0eed59a4c166a2c931/demo_assets/ToDo_2019-05-23.png)
+![musicfox.io ToDo component static PNG demo](demo_assets/ToDo_2019-05-23.png)
 
 This component narrowly implements a ToDo card with five simple sections: A *Header*, A *Title*, a *Subtitle*, a *ToDo List* and a *Footer*.  
 > ###### Weekly todos 
