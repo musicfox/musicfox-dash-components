@@ -32,13 +32,16 @@ This component narrowly implements a typical web-walkthrough *intro* using a sma
 ## `ToDo` component: `mdc.ToDo`
 ![musicfox.io ToDo component static PNG demo](https://github.com/thinkjrs/musicfox-dash-components/blob/6483207bc327d0215f76df0eed59a4c166a2c931/demo_assets/ToDo_2019-05-23.png)
 
-This component narrowly implements a ToDo card with four simple sections: A *Title*, a *Subtitle*, a *ToDo List* and a *Footer*.  
-Furthermore, the *ToDo List* can have a list of dictionaries to indicate list heirarchy. For example, 
->- Fruits
+This component narrowly implements a ToDo card with five simple sections: A *Header*, A *Title*, a *Subtitle*, a *ToDo List* and a *Footer*.  
+> ###### Weekly todos 
+>
+> ### Groceries
+>
+> ##### Things we need to acquire from the market
+>
 >    - Apples
 >    - Pears
 >    - Blueberries
->- Dry
 >    - Cereal
 >    - ...
 
@@ -48,26 +51,29 @@ You get the point. :wink:
 
 
 ```python
->>> mdc.ToDo(dict(
+>>> mdc.ToDo(id="my-todo-container",
 >>>     title="Groceries",
 >>>     subtitle="Our weekly list of items to obtain from a grocer.",
->>>     todos=[ # this can be a mix of strings or dictionaries
->>>         dict(
->>>             Fruits=["Apples", "Pears", "Blueberries"], 
->>>             Dry=["Cereal", "Kidney Beans"], 
->>>             Protein=["Tofu", "Ribeye Steak"],
->>>         ),
->>>         'Nutella',
+>>>     todos=[ # a list of markdown-formatted strings
+>>>         "Apples", "Pears", "Blueberries", 
+>>>         "Cereal", "Kidney Beans", 
+>>>         "Tofu", "Ribeye Steak",
+>>>         "Nutella",
 >>>     ],
->>>     footer=["Updated: just now"]
->>> )) # isn't she lovely?
+>>>     footer=f"Updated: just {pd.datetime.now()}"
+>>> ) # Sometimes, less is more. 
 ```
+
+We use [Bootstrap cards](https://getbootstrap.com/docs/4.3/components/card/)
+and [React-markdown](https://github.com/rexxars/react-markdown) under the hood.  
+Visit them for styling info, etc...  
 **Required Params**
 - `id`: a string id for the composed element
 - `todos`: a list of strings or dictionary key:value string:list, a *ToDo List*
     - a todo can always be nested as dictionary string key and value list (and possibly more dictionaries)
 
 **Optional Params**
+- `header`: a string *Header* for the todo list
 - `title`: a string *Title* for the todo list
 - `subtitle`: a string *Subtitle* for the todo list
 - `footer`: a string *Footer* for the todo list
