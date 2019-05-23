@@ -4,6 +4,14 @@ import '../../../assets/intro.js'
 import '../../../assets/introjs.css'
 import { Steps, Hints } from 'intro.js-react'
 
+// eslint-disable-next-line valid-jsdoc
+/**
+ * A component that leverages intro.js under the hood to provide the Hello component
+ * from musicfox.io. Include the steps you'd like to highlight and more.
+ *
+ * This component uses [intro.js](https://intro.js.com/) and thus far most endpoints for Steps
+ * are implemented.
+ */
 
 export default class Hello extends Component {
     constructor(props) {
