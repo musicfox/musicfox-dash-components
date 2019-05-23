@@ -30,6 +30,7 @@ This component narrowly implements a typical web-walkthrough *intro* using a sma
 ```
 
 ## `ToDo` component: `mdc.ToDo`
+![musicfox.io ToDo component static PNG demo](https://github.com/thinkjrs/musicfox-dash-components/blob/6483207bc327d0215f76df0eed59a4c166a2c931/demo_assets/ToDo_2019-05-23.png)
 
 This component narrowly implements a ToDo card with four simple sections: A *Title*, a *Subtitle*, a *ToDo List* and a *Footer*.  
 Furthermore, the *ToDo List* can have a list of dictionaries to indicate list heirarchy. For example, 
