@@ -1,6 +1,6 @@
 {
   "src/lib/components/Hello.react.js": {
-    "description": "",
+    "description": "A component that leverages intro.js under the hood to provide the Hello component\nfrom musicfox.io. Include the steps you'd like to highlight and more.\n\nThis component uses [intro.js](https://intro.js.com/) and thus far most endpoints for Steps\nare implemented.",
     "displayName": "Hello",
     "methods": [],
     "props": {
@@ -181,6 +181,264 @@
           "value": ".5",
           "computed": false
         }
+      }
+    }
+  },
+  "src/lib/components/ToDo.react.js": {
+    "description": "A component that renders a bootstrap card with Github Markdown bullet points, the\nToDo component from musicfox.io. Optionally include a title, subtitle, and/or footer.\n\nThis component uses [react-markdown](https://rexxars.github.io/react-markdown/)\nunder the hood, in the same fashion as the Dash Core Components Markdown component.",
+    "displayName": "ToDo",
+    "methods": [
+      {
+        "name": "checkString",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "mystring",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "checkArray",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "array",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "appendString",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "string",
+            "type": null
+          },
+          {
+            "name": "levels",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "toMD",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "text",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "listItems",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      },
+      {
+        "name": "makeBullets",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "array",
+            "type": null
+          },
+          {
+            "name": "levels",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "checkStringProp",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "prop",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "isString",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "string",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "makeClass",
+        "docblock": "Bootstrap-specific card class manipulations",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "string"
+          },
+          {
+            "name": "children"
+          }
+        ],
+        "returns": null,
+        "description": "Bootstrap-specific card class manipulations"
+      },
+      {
+        "name": "makeNothing",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      },
+      {
+        "name": "cardHeader",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      },
+      {
+        "name": "cardFooter",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      },
+      {
+        "name": "cardTitle",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      },
+      {
+        "name": "cardSubtitle",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      },
+      {
+        "name": "cardText",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      }
+    ],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID used to identify this component in Dash callbacks"
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash-assigned callback that should be called whenever any of the\nproperties change"
+      },
+      "todos": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "string"
+          }
+        },
+        "required": false,
+        "description": "A todo list.\n\nEnter the actual \"todos\" you have here as a list of strings or key-value pairs \nconsisting of strings=['another list', {'orAnother':['string-key:list-value', 'pairs']}].\n\nThese will be your \"bullet points\" in the typical \"list\".\n\nMarkdown all the way."
+      },
+      "title": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The string title you'd like to include. Markdown all the way."
+      },
+      "subtitle": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The string subtitle you'd like to include. Markdown all the way."
+      },
+      "footer": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The string footer you'd like to include. Markdown all the way."
+      },
+      "header": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The string header you'd like to include. Markdown all the way."
+      },
+      "dangerously_allow_html": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Boolean True or False (default)\n\nTrue will allow Markdown HTML rendering but leave your clients exposed to XSS attacks.\n\nDon't do this. But I'm into freedom; just don't blame ToDo when things go awry.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "loading_state": {
+        "type": {
+          "name": "shape",
+          "value": {
+            "is_loading": {
+              "name": "bool",
+              "description": "Determines if the component is loading or not",
+              "required": false
+            },
+            "prop_name": {
+              "name": "string",
+              "description": "Holds which property is loading",
+              "required": false
+            },
+            "component_name": {
+              "name": "string",
+              "description": "Holds the name of the component that is loading",
+              "required": false
+            }
+          }
+        },
+        "required": false,
+        "description": "Object that holds the loading state object coming from dash-renderer"
+      },
+      "containerProps": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "An object containing custom element props to put on the container\nelement such as id or style"
       }
     }
   }

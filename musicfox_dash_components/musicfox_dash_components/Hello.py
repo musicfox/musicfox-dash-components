@@ -5,7 +5,11 @@ from dash.development.base_component import Component, _explicitize_args
 
 class Hello(Component):
     """A Hello component.
+A component that leverages intro.js under the hood to provide the Hello component
+from musicfox.io. Include the steps you'd like to highlight and more.
 
+This component uses [intro.js](https://intro.js.com/) and thus far most endpoints for Steps
+are implemented.
 
 Keyword arguments:
 - id (string; optional): The ID used to identify this component in Dash callbacks
