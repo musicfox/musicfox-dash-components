@@ -62,12 +62,22 @@ export default class ToDo extends Component {
                 />
             </ul>
         )
-//        return '- '+string+'  \n'
     }
     listItems() {
-        return this.props.todos.map(todo => (
-            <ul> {todo} </ul>
-        ));
+        return ( 
+            <ul 
+                style={{
+//                    display:'list-item',
+                    listStyleType: 'disc',
+                    paddingLeft: 0,
+                    marginLeft: '1.25rem'
+                }}
+                children={this.props.todos.map(todo => (
+                    <li>{todo}</li>
+                ))}
+            >
+            </ul>
+        )
     }
     makeBullets(array, levels=0) {
         /**
@@ -75,17 +85,6 @@ export default class ToDo extends Component {
          *
          */
         this.children = this.listItems()
-//        for (let i in array) {
-//            if (this.checkString(array[i])) {
-//                this.children.push(this.appendString(array[i], levels))
-//                console.log(this.children)
-//                continue;
-//            }
-//            if (this.checkArray(array[i])) { 
-//                // this won't work as of 5/22/2019
-//                return this.makeBullets(array[i], levels + 1);
-//            }
-//        }
     }
     
     render() {
