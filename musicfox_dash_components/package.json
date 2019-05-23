@@ -1,6 +1,6 @@
 {
   "name": "musicfox_dash_components",
-  "version": "0.0.6",
+  "version": "0.0.61",
   "description": "Dash components from your favorite music tech company, musifox.io.",
   "main": "build/index.js",
   "scripts": {
@@ -14,16 +14,17 @@
     "build:all": "npm run build:js && npm run build:js-dev && npm run build:py",
     "build:all-activated": "(. venv/bin/activate || venv\\scripts\\activate && npm run build:all)"
   },
-  "author": "Jason R. Stevens, CFA jstevens@reconditecapital.com",
+  "author": "Jason R. Stevens, CFA jason@musicfox.io",
   "license": "MIT",
   "dependencies": {
     "@babel/core": "^7.4.3",
+    "acorn": "^6.0.0",
     "babel-core": "^6",
     "intro.js": "^2.5.0",
     "intro.js-react": "^0.2.0",
     "ramda": "^0.25.0",
-    "regenerator-runtime": "^0.13.2",
-    "acorn": "^6.0.0"
+    "react-markdown": "^4.0.8",
+    "regenerator-runtime": "^0.13.2"
   },
   "devDependencies": {
     "babel-core": "^7.0.0-bridge.0",
