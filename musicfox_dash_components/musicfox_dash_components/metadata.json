@@ -441,5 +441,147 @@
         "description": "An object containing custom element props to put on the container\nelement such as id or style"
       }
     }
+  },
+  "src/lib/components/Twash.react.js": {
+    "description": "Twash, A Twitter Profile Timeline component for Dash from\nmusicfox.io.\n\nThis component uses react-twitter-widgets under the hood.",
+    "displayName": "Twash",
+    "methods": [
+      {
+        "name": "buildOptions",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      },
+      {
+        "name": "buildChromeOptions",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "options",
+            "type": null
+          }
+        ],
+        "returns": null
+      }
+    ],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID used to identify this component in Dash callbacks"
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash-assigned callback that should be called whenever any of the\nproperties change"
+      },
+      "sourceType": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "String 'profile' is all for now"
+      },
+      "handle": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "String user name or public handle, e.g. ArianaGrande"
+      },
+      "height": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Integer height (in pixels)"
+      },
+      "width": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Integer width (in pixels)"
+      },
+      "theme": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'dark'",
+              "computed": false
+            },
+            {
+              "value": "'light'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "* With dark or light theme"
+      },
+      "linkColor": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "* With custom link colors. Note: Only Hex colors are supported."
+      },
+      "borderColor": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "* With custom border colors. Note: Only Hex colors are supported."
+      },
+      "noHeader": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "* Hide the header from timeline"
+      },
+      "noFooter": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "* Hide the footer from timeline"
+      },
+      "noBorders": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "* Hide the border from timeline"
+      },
+      "noScrollbar": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "* Hide the scrollbars"
+      },
+      "transparent": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "* Enable Transparancy"
+      },
+      "lang": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "* Custom language code. Supported codes here: https://developer.twitter.com/en/docs/twitter-for-websites/twitter-for-websites-supported-languages/overview.html"
+      }
+    }
   }
 }
