@@ -134,7 +134,7 @@ export default class ToDo extends Component {
         }
     }
     cardFooter() {
-        if (this.isString(this.props.title)) {
+        if (this.isString(this.props.footer)) {
             return (
                 <div class="card-footer bg-light text-muted border-light">
                     <small>
