@@ -82,7 +82,7 @@ Visit them for styling info, etc...
 ## `Twash` component: `mdc.Twash`
 Twitter, for Dash.  
 
-![musicfox.io Twash component static PNG demo](demo_assets/Twash-05-28.png)
+![musicfox.io Twash component static PNG demo](demo_assets/Twash_2019-05-28.png)
 
 This component implements an embedded Twitter timeline.   
 
