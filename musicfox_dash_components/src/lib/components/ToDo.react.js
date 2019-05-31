@@ -179,7 +179,7 @@ export default class ToDo extends Component {
     render() {
         this.makeBullets(this.props.todos)
         return (
-            <div id={this.props.id} class="card border-light" >
+            <div id={this.props.id} class="card w-100 border-light">
                 {this.cardHeader()}
                 <div class="card-body">
                     {this.cardTitle()}
@@ -274,7 +274,7 @@ ToDo.propTypes = {
     }),
 
     /**
-     *
+     * Append a class name to the class
      */
 
     /**

@@ -1,6 +1,6 @@
 {
   "name": "musicfox_dash_components",
-  "version": "0.0.63",
+  "version": "0.0.64",
   "description": "Dash components from your favorite music tech company, musifox.io.",
   "main": "build/index.js",
   "scripts": {
