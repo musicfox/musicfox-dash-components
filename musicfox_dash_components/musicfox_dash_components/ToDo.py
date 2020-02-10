@@ -13,7 +13,7 @@ under the hood, in the same fashion as the Dash Core Components Markdown compone
 
 Keyword arguments:
 - id (string; optional): The ID used to identify this component in Dash callbacks
-- todos (list; optional): A todo list.
+- todos (list of strings; optional): A todo list.
 
 Enter the actual "todos" you have here as a list of strings or key-value pairs 
 consisting of strings=['another list', {'orAnother':['string-key:list-value', 'pairs']}].
@@ -25,12 +25,12 @@ Markdown all the way.
 - subtitle (string; optional): The string subtitle you'd like to include. Markdown all the way.
 - footer (string; optional): The string footer you'd like to include. Markdown all the way.
 - header (string; optional): The string header you'd like to include. Markdown all the way.
-- dangerously_allow_html (boolean; optional): Boolean True or False (default)
+- dangerously_allow_html (boolean; default False): Boolean True or False (default)
 
 True will allow Markdown HTML rendering but leave your clients exposed to XSS attacks.
 
 Don't do this. But I'm into freedom; just don't blame ToDo when things go awry.
-- loading_state (optional): Object that holds the loading state object coming from dash-renderer. loading_state has the following type: dict containing keys 'is_loading', 'prop_name', 'component_name'.
+- loading_state (dict; optional): Object that holds the loading state object coming from dash-renderer. loading_state has the following type: dict containing keys 'is_loading', 'prop_name', 'component_name'.
 Those keys have the following types:
   - is_loading (boolean; optional): Determines if the component is loading or not
   - prop_name (string; optional): Holds which property is loading

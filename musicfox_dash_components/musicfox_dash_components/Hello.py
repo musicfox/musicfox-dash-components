@@ -15,27 +15,27 @@ Keyword arguments:
 - id (string; optional): The ID used to identify this component in Dash callbacks
 - steps (list; required): List of dictionaries containing each step, with "intro" and "element"
 keys, at a minimum.
-- nextLabel (string; optional): nextLabel
+- nextLabel (string; default "Next"): nextLabel
 
 String label for the "next" button
-- prevLabel (string; optional): prevLabel
+- prevLabel (string; default "Previous"): prevLabel
 
 String label for the "prev" button
-- skipLabel (string; optional): skipLabel 
+- skipLabel (string; default "Skip tutorial"): skipLabel 
 
 String label for the "skip" button
-- doneLabel (string; optional): doneLabel
+- doneLabel (string; default "Done"): doneLabel
 
 String label for the "done" button
-- hidePrev (boolean; optional): hidePrev
+- hidePrev (boolean; default True): hidePrev
 
 Boolean true to hide "prev" button in the first step, default is false, 
 disabled (grayed-out).
-- hideNext (boolean; optional): hideNext
+- hideNext (boolean; default True): hideNext
 
 Boolean true to hide "next" button in the last step, default is false,
 disabled (grayed-out).
-- defaultTooltipPos (string; optional): defaultTooltipPos
+- defaultTooltipPos (string; default 'bottom'): defaultTooltipPos
 
 String default tooltip position (these can be changed per-step)
 - tooltipClass (string; optional): tooltipClass
@@ -45,23 +45,23 @@ String class of all tooltip CSS
 
 String class of all highlight over tooltip CSS (for the helperLayer) in
 intro.js
-- exitOnEsc (boolean; optional): exitOnEsc
+- exitOnEsc (boolean; default True): exitOnEsc
 
 Boolean true exits with an esc keypress, defaults to true
-- exitOnOverlayClick (boolean; optional): exitOnOverlayClick
+- exitOnOverlayClick (boolean; default True): exitOnOverlayClick
 
 Boolean true exits if clicking on the overlay, defaults to false
-- showStepNumbers (boolean; optional): showStepNumbers
+- showStepNumbers (boolean; default True): showStepNumbers
 
 Boolean true shows the steps in the red circle, default true
-- keyboardNavigation (boolean; optional): keyboardNavigation
+- keyboardNavigation (boolean; default True): keyboardNavigation
 
 Boolean true allows navigating with the keyboard
-- showProgress (boolean; optional): showProgress
+- showProgress (boolean; default True): showProgress
 
 
 Boolean true shows the progress bar
-- overlayOpacity (number; optional): overlayOpacity
+- overlayOpacity (number; default .5): overlayOpacity
 
 Number between 0 and 1 adjusts the opacity of the overlay layer"""
     @_explicitize_args
