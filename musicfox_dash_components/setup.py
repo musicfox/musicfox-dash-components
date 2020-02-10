@@ -10,7 +10,7 @@ package_name = package["name"].replace(" ", "_").replace("-", "_")
 with open(os.path.join(os.getcwd(), 'readme.md'), encoding="utf-8") as f:
     long_description = '\n' + f.read()
 
-repo_url = f"https://github.com/thinkjrs/musicfox-dash-components"
+repo_url = f"https://github.com/musicfox/musicfox-dash-components"
 setup(
     name=package_name,
     version=package["version"],
