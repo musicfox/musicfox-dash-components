@@ -8,6 +8,7 @@ dash = ">=0.38.0"
 
 [dev-packages]
 pyaml = "*"
+twine = "*"
 
 [requires]
 python_version = "3.7"
