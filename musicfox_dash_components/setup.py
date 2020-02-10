@@ -7,7 +7,7 @@ with open(os.path.join('musicfox_dash_components', 'package.json')) as f:
 
 package_name = package["name"].replace(" ", "_").replace("-", "_")
 
-with open(os.path.join(os.getcwd(), 'readme.md'), encoding="utf-8") as f:
+with open(os.path.join(os.getcwd(), 'README.md'), encoding="utf-8") as f:
     long_description = '\n' + f.read()
 
 repo_url = f"https://github.com/musicfox/musicfox-dash-components"
