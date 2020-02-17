@@ -1,0 +1,15 @@
+Package: musicfoxDashComponents
+Title: Dash components from your favorite mmusic valuation software company [Musicfox](https://musicfox.io)
+Version: 0.0.70
+Description: Dash components from your favorite mmusic valuation software company [Musicfox](https://musicfox.io)
+Depends: R (>= 3.0.2)
+Imports: 
+Suggests: 
+License: MIT + file LICENSE
+URL: https://github.com/musicfox/musicfox-dash-components
+BugReports: https://github.com/musicfox/musicfox-dash-components/issues
+Encoding: UTF-8
+LazyData: true
+KeepSource: true
+Author: Musicfox, Inc. [aut]
+Maintainer: Musicfox, Inc. <dev@musicfox.io>

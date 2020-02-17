@@ -6,7 +6,7 @@ import dash_html_components as html
 app = dash.Dash(__name__)
 
 app.scripts.config.serve_locally = True
-#app.css.config.serve_locally = True
+app.css.config.serve_locally = False
 app.css.append_css({
     "external_url": "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     }

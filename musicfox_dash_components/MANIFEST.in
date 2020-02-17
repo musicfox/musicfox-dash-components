@@ -1,11 +1,7 @@
 include musicfox_dash_components/musicfox_dash_components.min.js
-include musicfox_dash_components/musicfox_dash_components.dev.js
+include musicfox_dash_components/musicfox_dash_components.min.js.map
 include musicfox_dash_components/metadata.json
-include musicfox_dash_components/package.json
-include assets/intro.js
-include assets/introjs.css
-include src/lib/helpers/defaultProps.js
-include src/lib/helpers/proptypes.js
-include musicfox_dash_components/README.md
+include musicfox_dash_components/package-info.json
 include README.md
-include LICENESE
+include LICENSE
+include package.json
