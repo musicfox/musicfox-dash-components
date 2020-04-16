@@ -2,7 +2,7 @@
   "name": "musicfox_dash_components",
   "version": "0.0.70",
   "description": "Dash components from your favorite mmusic valuation software company [Musicfox](https://musicfox.io)",
-"repository": {
+  "repository": {
     "type": "git",
     "url": "git://github.com/musicfox/musicfox-dash-components.git"
   },
